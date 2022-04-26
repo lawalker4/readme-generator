@@ -51,11 +51,14 @@ THEN I am taken to the corresponding section of the README
 ### Installation
 Repo:
 
+[Inquirer](https://www.npmjs.com/package/inquirer#installation)
+
 
 ---
 
 ## License
 
+License used as example [ChooseALicense.com](https://choosealicense.com/no-permission/#for-users)
 
 ----
 ## Authors
