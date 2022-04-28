@@ -154,15 +154,46 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(./utils/git ) fileContent, err => {
+
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'Your README has been Made'
+            });
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(function (response) {
-
-    })
+    // inquirer.prompt(questions).then(function (response) 
+    return inquirer.prompt(questions)
+        .then(readmeData => {
+            return readmeData
+        })
 }
 
 // Function call to initialize app
-init();
+init()
+    .then(readmeData => {
+    console.log(readmeData);
+    return generateMarkdown(readmeData);
+})
+.then(pageMD => {
+    return writeFile(pageMD);
+})
+
+    .then(writeFileResponse => {
+        console.log(writeFileResponse.message);
+    })
+
+  .catch (err => {
+            console.log(err);
+        });
 
