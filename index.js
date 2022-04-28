@@ -156,7 +156,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile(./utils/git ) fileContent, err => {
+        fs.writeToFile('./README-generator.md', fileContent, err => {
 
             if (err) {
                 reject(err);
@@ -186,11 +186,11 @@ init()
     return generateMarkdown(readmeData);
 })
 .then(pageMD => {
-    return writeFile(pageMD);
+    return writeToFile(pageMD);
 })
 
-    .then(writeFileResponse => {
-        console.log(writeFileResponse.message);
+    .then(writeToFileResponse => {
+        console.log(writeToFileResponse.message);
     })
 
   .catch (err => {
