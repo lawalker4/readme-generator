@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+// const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const promptReadme = () => {
@@ -10,6 +10,7 @@ const promptReadme = () => {
   Create a Readme
   =================
   `);
+
 
 const questions = [
     {
@@ -159,11 +160,11 @@ const questions = [
         },
     },
 ]
-    .then((userInput) => {
-        console.log(userInput)
-        return writeToFile('./utils/README.md', genMarkdown(userInput));
-    })
-};
+    // .then((userInput) => {
+    //     console.log(userInput)
+    //     return writeToFile('./utils/README.md', generateMarkdown(userInput));
+    // })
+}
 
 
 // TODO: Create a function to write README file
@@ -181,26 +182,26 @@ function writeToFile(fileName, data) {
             });
         });
     });
-};-
+};
 
 // TODO: Create a function to initialize app
 promptReadme();
 
 // Function call to initialize app
-init()
-    .then(readmeData => {
-    console.log(readmeData);
-    return generateMarkdown(readmeData);
-})
-.then(pageMD => {
-    return writeToFile(pageMD);
-})
+// init();
+//     .then(readmeData => {
+//     console.log(readmeData);
+//     return generateMarkdown(readmeData);
+// })
+// .then(pageMD => {
+//     return writeToFile(pageMD);
+// })
 
-    .then(writeToFileResponse => {
-        console.log(writeToFileResponse.message);
-    })
+//     .then(writeToFileResponse => {
+//         console.log(writeToFileResponse.message);
+//     })
 
-  .catch (err => {
-            console.log(err);
-        });
+//   .catch (err => {
+//             console.log(err);
+//         });
 

@@ -39,7 +39,7 @@ function renderLicenseSection(license) {
   }
 
 // TODO: Create a function to generate markdown for README
-const generateMarkdown = aboutText => {
+const generateAbout = aboutText => {
   if (!aboutText) {
     return '';
   }
