@@ -187,20 +187,20 @@ function writeToFile(fileName, data) {
 promptReadme();
 
 // Function call to initialize app
-// init()
-//     .then(readmeData => {
-//     console.log(readmeData);
-//     return generateMarkdown(readmeData);
-// })
-// .then(pageMD => {
-//     return writeToFile(pageMD);
-// })
+init()
+    .then(readmeData => {
+    console.log(readmeData);
+    return generateMarkdown(readmeData);
+})
+.then(pageMD => {
+    return writeToFile(pageMD);
+})
 
-//     .then(writeToFileResponse => {
-//         console.log(writeToFileResponse.message);
-//     })
+    .then(writeToFileResponse => {
+        console.log(writeToFileResponse.message);
+    })
 
-//   .catch (err => {
-//             console.log(err);
-//         });
+  .catch (err => {
+            console.log(err);
+        });
 
