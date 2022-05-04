@@ -61,7 +61,7 @@ Repo:
 License used as example [ChooseALicense.com](https://choosealicense.com/no-permission/#for-users)
 
 ----
-## Authors
+# Authors
 
 Built and maintain by [Ashley Walker](https://github.com/lawalker4)
 ---
