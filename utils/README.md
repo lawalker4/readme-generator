@@ -2,12 +2,12 @@
   # <Your-Project-Title>
 
   ## Description
-  dog
+  This application has been created to help coders create a great README. They have to answer a few questions and there README has been generated. 
 
   ---
   
   ## Table of Contents (Optional)
-  cat
+  #About, # Installation, #License, #Author
   
   If your README is long, add a table of contents to make it easy for users to find what they need.
   
@@ -17,11 +17,11 @@
   - [License](#license)
   
   ## Installation
-bear  
+This application has been created to help coders create a great README. They have to answer a few questions and there README has been generated.   
   
   ---
   ## Usage
-  shark  
+  Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.  
 
   
   Provide instructions and examples for use. Include screenshots as needed.
@@ -31,9 +31,14 @@ bear
       md
       ![alt text](assets/images/screenshot.png)
       
-    --- 
+  ---
+  
+  ## Credits
+  undefined  
+
+  --- 
   ## License
-  cow  
+  The licenses that can be selected are for appoved and unappoved licenses.  
 
   
   The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
@@ -41,20 +46,20 @@ bear
   ---
       
   ## How to Contribute
-  deer  
+  Ashley Walker and her dog Sky Walker :)  
   ---
   
   If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
   
   ---
   ## Tests
-  pig  
+  If done correctly this will generate a great README.  
   
   Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
   ---
-  undefined
+  I am always open to questions.
   ---
-  SkyWalker
-  123ave@abc.com
+  lawalker4@github.com
+  lauraashleywalker4@gmail.com
 
