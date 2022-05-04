@@ -42,14 +42,14 @@ THEN I am taken to the corresponding section of the README
 ---
 # Screenshots:
 
-1. ![screenshot 1](image/readme-generator-1.png)
-2
-3
+1. ![screenshot 1](/images/screenshot1.JPG)
+2. ![screenshot 2](/images/screenshot2.JPG)
+3. ![screenshot 3](/images/screenshot3.JPG)
 
 ---
 
 ### Installation
-Repo:
+[Repo](https://lawalker4.github.io/readme-generator/)
 
 [Inquirer](https://www.npmjs.com/package/inquirer#installation)
 
