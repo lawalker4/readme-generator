@@ -1,4 +1,4 @@
-const fs = reuire('fs');
+const fs = require('fs');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -56,11 +56,12 @@ function generateMarkdown(data) {
   # <Your-Project-Title>
 
   ## Description
-  ${data.desc}
+  ${data.description}
 
   ---
   
   ## Table of Contents (Optional)
+  ${data.tableofcontents}
   
   If your README is long, add a table of contents to make it easy for users to find what they need.
   
@@ -106,10 +107,17 @@ ${data.installation}
   
   ---
   ## Tests
-  ${data.tests}  
+  ${data.test}  
   
   Go the extra mile and write tests for your application. Then provide examples on how to run them here.
-`;
-}
+
+  ---
+  ${data.questions}
+  ---
+  ${data.githubusername}
+  ${data.email}
+
+`
+};
 
 module.exports = generateMarkdown;

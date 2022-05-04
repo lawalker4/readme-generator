@@ -15,113 +15,6 @@ const promptReadme = () => {
 const questions = [
     {
         type: "input",
-        name: 'Description',
-        message: 'Enter your README Description',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Enter your README description.');
-                return false;
-            }
-        },
-    },
-    {
-        type: "input",
-        name: 'Table of Contents',
-        message: 'Enter your Table of Contents',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Enter your Table of Contents.');
-                return false;
-            }
-        },
-    },
-
-    {
-        type: "input",
-        name: 'Installation',
-        message: 'Enter your Installation Description',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Enter your Installation description.');
-                return false;
-            }
-        },
-    },
-    {
-        type: "input",
-        name: 'Usage',
-        message: 'Enter your Usage',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Enter your Usage.');
-                return false;
-            }
-        },
-    },
-    {
-        type: "input",
-        name: 'License',
-        message: 'Enter your License Description',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Enter your License description.');
-                return false;
-            }
-        },
-    },
-    {
-        type: "input",
-        name: 'Contributing',
-        message: 'Enter your Contributors',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Enter your Contributors.');
-                return false;
-            }
-        },
-    },
-    {
-
-        type: "input",
-        name: 'Test',
-        message: 'Enter your Test Description',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Enter your Test description.');
-                return false;
-            }
-        },
-    },
-    {
-
-        type: "input",
-        name: 'Questions',
-        message: 'Enter your Questions',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Enter your Questions.');
-                return false;
-            }
-        },
-    },
-    {
-        type: "input",
         name: 'title',
         message: 'What is your title of your project?',
         validate: nameInput => {
@@ -135,7 +28,115 @@ const questions = [
     },
     {
         type: "input",
-        name: 'github Username',
+        name: 'description',
+        message: 'Enter your README Description',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Enter your README description.');
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        name: 'tableofcontents',
+        message: 'Enter your Table of Contents',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Enter your Table of Contents.');
+                return false;
+            }
+        },
+    },
+
+    {
+        type: "input",
+        name: 'installation',
+        message: 'Enter your Installation Description',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Enter your Installation description.');
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        name: 'usage',
+        message: 'Enter your Usage',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Enter your Usage.');
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        name: 'license',
+        message: 'Enter your License Description',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Enter your License description.');
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        name: 'contribute',
+        message: 'Enter your Contributors',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Enter your Contributors.');
+                return false;
+            }
+        },
+    },
+    {
+
+        type: "input",
+        name: 'test',
+        message: 'Enter your Test Description',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Enter your Test description.');
+                return false;
+            }
+        },
+    },
+    {
+
+        type: "input",
+        name: 'questions',
+        message: 'Enter your Questions',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Enter your Questions.');
+                return false;
+            }
+        },
+    },
+    
+    {
+        type: "input",
+        name: 'githubusername',
         message: 'What is your GitHub Username?',
         validate: nameInput => {
             if (nameInput) {
@@ -160,17 +161,19 @@ const questions = [
         },
     },
 ]
-    // .then((userInput) => {
-    //     console.log(userInput)
-    //     return writeToFile('./utils/README.md', generateMarkdown(userInput));
-    // })
+inquirer.prompt(questions)
+    .then((userInput) => {
+        console.log(userInput)
+        return writeToFile('./utils/README.md', generateMarkdown(userInput));
+    })
+// }
 }
 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile(fileName, fileContent, err => {
+        fs.writeFile(fileName, data, err => {
 
             if (err) {
                 reject(err);
@@ -186,22 +189,4 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 promptReadme();
-
-// Function call to initialize app
-// init();
-//     .then(readmeData => {
-//     console.log(readmeData);
-//     return generateMarkdown(readmeData);
-// })
-// .then(pageMD => {
-//     return writeToFile(pageMD);
-// })
-
-//     .then(writeToFileResponse => {
-//         console.log(writeToFileResponse.message);
-//     })
-
-//   .catch (err => {
-//             console.log(err);
-//         });
 
